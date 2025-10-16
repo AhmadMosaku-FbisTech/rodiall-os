@@ -1,4 +1,3 @@
----
 
 # 🛰️ Rodiall OS
 
