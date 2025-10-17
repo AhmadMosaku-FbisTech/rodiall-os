@@ -1,0 +1,14 @@
+#!/bin/sh /etc/rc.common
+START=90
+USE_PROCD=1
+PROG=/usr/sbin/rodial-ddns
+
+start_service() {
+    procd_open_instance
+    procd_set_param command $PROG --interval 300
+    procd_set_param respawn
+    procd_close_instance
+}
+stop_service() {
+    procd_kill_instance
+}
