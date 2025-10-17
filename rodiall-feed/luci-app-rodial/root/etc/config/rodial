@@ -1,0 +1,4 @@
+config rodial 'main'
+    option enable '1'
+    option server 'fbis.example.com'
+    option keepalive '25'

@@ -1,0 +1,4 @@
+{
+  "device": "rodial-router-001",
+  "metrics": ["uptime", "rsrp", "throughput", "cpu"]
+}

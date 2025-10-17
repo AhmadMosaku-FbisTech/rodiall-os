@@ -1,0 +1,8 @@
+#!/bin/sh /etc/rc.common
+START=99
+STOP=10
+
+start() {
+    echo "rodial-ddns: one-shot update"
+    /usr/bin/rodial-ddns || true
+}

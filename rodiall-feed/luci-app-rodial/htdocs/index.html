@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Rodial Status</title></head>
+<body>
+  <h1>Rodial</h1>
+  <div id="status">Loading...</div>
+  <script>
+    fetch('/cgi-bin/luci/admin/services/rodial/status').then(r=>r.json()).then(j=>{
+      document.getElementById('status').innerText = JSON.stringify(j);
+    });
+  </script>
+</body>
+</html>

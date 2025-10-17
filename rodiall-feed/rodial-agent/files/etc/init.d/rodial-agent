@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+START=95
+STOP=10
+
+start() {
+    echo "Starting rodial-agent..."
+    start-stop-daemon -S -b -x /usr/bin/rodial-agent
+}
+
+stop() {
+    echo "Stopping rodial-agent..."
+    start-stop-daemon -K -x /usr/bin/rodial-agent
+}

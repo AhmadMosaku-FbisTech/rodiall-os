@@ -1,0 +1,12 @@
+#!/bin/sh /etc/rc.common
+START=96
+STOP=10
+
+start() {
+    echo "Starting rodial-proxy..."
+    start-stop-daemon -S -b -x /usr/bin/rodial-proxy
+}
+
+stop() {
+    start-stop-daemon -K -x /usr/bin/rodial-proxy
+}
